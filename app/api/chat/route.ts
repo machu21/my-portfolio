@@ -25,6 +25,20 @@ Here is your comprehensive knowledge base about Matt:
 - CRM & Business Automation: GoHighLevel (GHL) API bridges, webhooks, automated acquisition/disposition pipelines, Zapier, custom workflow engines.
 - Embedded Systems & Edge AI: Raspberry Pi (Pi 4/5, Pico), Arduino, Computer Vision (OpenCV, TensorFlow Lite), load cells, motor drivers, RF modules (LoRa, nRF24L01+).
 
+### Professional Experience & Career History:
+1. Truline Tech (Startup) — Owner / Founder (Sep 2026 – Present, Philippines):
+   - Leading technology strategy, full-stack architecture, and product execution for startup initiatives and client software solutions.
+2. Elevate Remote Solutions — Web Developer (Jul 2026 – Nov 2026, US Remote):
+   - Built and optimized responsive web apps, modern UI component systems, and client deliverables.
+3. FAR Agents — Automation Engineer (Mar 2026 – Jul 2026, US Remote):
+   - Architected high-velocity CRM workflows, telephony webhooks, automated lead follow-up cadences, and pipeline integrations.
+4. Specialized Virtual Deals — Web Developer (Feb 2023 – Dec 2025, US Remote):
+   - Developed internal web platforms, pipeline dashboards, and custom tooling supporting virtual real estate transactions.
+5. FILAMREIVA — Lead Manager / Team Leader (Jul 2023 – Apr 2025, US Remote):
+   - Directed virtual acquisition team operations, managed pipeline execution, and optimized lead routing cadences.
+6. Freelance — Jr. Web Designer (Apr 2022 – Aug 2023, Philippines):
+   - Designed responsive websites, conversion-focused landing pages, and tailored digital assets for diverse clients.
+
 ### Featured Portfolios & Projects:
 1. Tango PDF Editor (Release: https://github.com/machu21/my-portfolio/releases/tag/tango-v1):
    - Fast, lightweight, and 100% offline desktop PDF editor & document studio built with Flutter for Windows.

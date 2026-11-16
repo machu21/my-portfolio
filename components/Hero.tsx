@@ -2,20 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Calendar, 
-  Mail, 
-  MapPin, 
-  Sparkles, 
-  ArrowUpRight, 
-  Terminal,
+import {
+  Calendar,
+  Mail,
+  MapPin,
+  Sparkles,
+  ArrowUpRight,
+  CodeXml,
   Laptop,
-  Monitor,
   Smartphone,
-  Zap,
   Rocket,
-  PenTool
+  Pencil
 } from "lucide-react";
+import { SparkleStar, OpenAIIcon, ClaudeIcon, AiNodesIcon } from "@/components/Icons";
 
 export default function Hero() {
   const triggerChat = () => {
@@ -24,10 +23,10 @@ export default function Hero() {
 
   return (
     <section id="about" className="flex flex-col gap-8 pt-2">
-      
+
       {/* Top Banner / Avatar + Bio Intro */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-        
+
         {/* Profile Picture with modern frame */}
         <div className="relative group shrink-0">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-zinc-200 to-zinc-400 dark:from-zinc-700 dark:to-zinc-800 rounded-3xl blur-[2px] opacity-70 group-hover:opacity-100 transition duration-300"></div>
@@ -68,58 +67,55 @@ export default function Hero() {
 
       {/* Narrative with inline styled tags using real Lucide icons */}
       <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 shadow-xs space-y-4">
-        <p className="text-zinc-700 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
+        <p className="text-zinc-700 dark:text-zinc-300 text-base sm:text-lg leading-relaxed sm:leading-loose">
           I&apos;m a{" "}
-          <span className="inline-flex items-center gap-1.5 font-mono text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-semibold align-middle">
-            <Terminal className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-            full-stack engineer
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium text-xs sm:text-sm border border-zinc-200/80 dark:border-zinc-700/80 shadow-2xs align-middle mx-0.5">
+            <CodeXml className="w-3.5 h-3.5 text-zinc-600 dark:text-zinc-400" />
+            <span>full-stack</span>
           </span>{" "}
-          building modern{" "}
-          <span className="inline-flex items-center gap-1.5 font-mono text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-semibold align-middle">
-            <Laptop className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-            web
-          </span>
-          ,{" "}
-          <span className="inline-flex items-center gap-1.5 font-mono text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-semibold align-middle">
-            <Monitor className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-            desktop
+          engineer building modern{" "}
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium text-xs sm:text-sm border border-zinc-200/80 dark:border-zinc-700/80 shadow-2xs align-middle mx-0.5">
+            <Laptop className="w-3.5 h-3.5 text-zinc-600 dark:text-zinc-400" />
+            <span>web</span>
           </span>{" "}
           &{" "}
-          <span className="inline-flex items-center gap-1.5 font-mono text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-semibold align-middle">
-            <Smartphone className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-            mobile apps
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium text-xs sm:text-sm border border-zinc-200/80 dark:border-zinc-700/80 shadow-2xs align-middle mx-0.5">
+            <Smartphone className="w-3.5 h-3.5 text-zinc-600 dark:text-zinc-400" />
+            <span>mobile apps</span>
           </span>
-          . Lately I&apos;ve been focused on{" "}
-          <span className="inline-flex items-center gap-1.5 font-mono text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-semibold align-middle">
-            <Sparkles className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-            real-time spaces
-          </span>{" "}
-          and{" "}
-          <span className="inline-flex items-center gap-1.5 font-mono text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-semibold align-middle">
-            <Zap className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-            offline studios
+          , with a dedicated focus on{" "}
+          <span className="inline-flex items-center align-middle mx-1 group/ai cursor-default">
+            <span className="inline-flex items-center -space-x-1.5 mr-1.5">
+              <span className="relative z-10 w-6 h-6 sm:w-6.5 sm:h-6.5 rounded-md bg-white dark:bg-zinc-800 border border-zinc-200/90 dark:border-zinc-700/90 shadow-xs flex items-center justify-center text-zinc-800 dark:text-zinc-200 -rotate-6 group-hover/ai:-translate-x-1 transition-transform">
+                <SparkleStar className="w-3.5 h-3.5" />
+              </span>
+              <span className="relative z-20 w-6 h-6 sm:w-6.5 sm:h-6.5 rounded-md bg-white dark:bg-zinc-800 border border-zinc-200/90 dark:border-zinc-700/90 shadow-xs flex items-center justify-center text-zinc-800 dark:text-zinc-200 -rotate-2 group-hover/ai:-translate-y-0.5 transition-transform">
+                <OpenAIIcon className="w-3.5 h-3.5" />
+              </span>
+              <span className="relative z-30 w-6 h-6 sm:w-6.5 sm:h-6.5 rounded-md bg-white dark:bg-zinc-800 border border-zinc-200/90 dark:border-zinc-700/90 shadow-xs flex items-center justify-center text-zinc-800 dark:text-zinc-200 rotate-2 group-hover/ai:translate-y-0.5 transition-transform">
+                <ClaudeIcon className="w-3.5 h-3.5" />
+              </span>
+              <span className="relative z-40 w-6 h-6 sm:w-6.5 sm:h-6.5 rounded-md bg-white dark:bg-zinc-800 border border-zinc-200/90 dark:border-zinc-700/90 shadow-xs flex items-center justify-center text-zinc-800 dark:text-zinc-200 rotate-6 group-hover/ai:translate-x-1 transition-transform">
+                <AiNodesIcon className="w-3.5 h-3.5" />
+              </span>
+            </span>
+            <span className="font-semibold text-zinc-900 dark:text-zinc-100">generative AI</span>
           </span>
           .
         </p>
 
-        <p className="text-zinc-700 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
-          Right now I&apos;m building{" "}
-          <span className="inline-flex items-center gap-1.5 font-mono text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-semibold align-middle">
-            <Rocket className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-            high-impact software
+        <p className="text-zinc-700 dark:text-zinc-300 text-base sm:text-lg leading-relaxed sm:leading-loose">
+          Every day I&apos;m shipping{" "}
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium text-xs sm:text-sm border border-zinc-200/80 dark:border-zinc-700/80 shadow-2xs align-middle mx-0.5">
+            <Rocket className="w-3.5 h-3.5 text-zinc-600 dark:text-zinc-400" />
+            <span>cool new software</span>
           </span>{" "}
-          every day — from offline desktop tools like{" "}
-          <strong className="text-zinc-900 dark:text-zinc-100 font-semibold">Tango</strong>, to
-          retro spatial spaces like{" "}
-          <strong className="text-zinc-900 dark:text-zinc-100 font-semibold">TeemChat</strong>, to
-          commercial platforms like{" "}
-          <strong className="text-zinc-900 dark:text-zinc-100 font-semibold">C&J Pickleball</strong>.
-          I love turning{" "}
-          <span className="inline-flex items-center gap-1.5 font-mono text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 font-semibold align-middle">
-            <PenTool className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
-            rough ideas
+          and automated workflows. I love turning{" "}
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium text-xs sm:text-sm border border-zinc-200/80 dark:border-zinc-700/80 shadow-2xs align-middle mx-0.5">
+            <Pencil className="w-3.5 h-3.5 text-zinc-600 dark:text-zinc-400" />
+            <span>rough ideas</span>
           </span>{" "}
-          into production-grade products people genuinely rely on.
+          into products people genuinely rely on.
         </p>
 
         {/* Quick Social & Link Pills */}
@@ -150,15 +146,6 @@ export default function Hero() {
             className="hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline flex items-center gap-1"
           >
             calendly <ArrowUpRight className="w-3 h-3" />
-          </Link>
-          <span>/</span>
-          <Link
-            href="https://github.com/machu21/my-portfolio/releases/tag/tango-v1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline flex items-center gap-1"
-          >
-            tango release <ArrowUpRight className="w-3 h-3" />
           </Link>
         </div>
       </div>

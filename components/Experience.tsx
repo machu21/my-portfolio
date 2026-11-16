@@ -4,6 +4,7 @@ type ExperienceItem = {
   role: string;
   company: string;
   year: string;
+  location?: string;
   description?: string;
   skills?: string[];
   isCurrent?: boolean;
@@ -13,55 +14,53 @@ type ExperienceItem = {
 export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
-      role: "Lead Automation Engineer",
-      company: "FAR AGENTS",
-      year: "2026",
+      role: "Owner / Founder",
+      company: "Truline Tech (Startup)",
+      year: "Sep 2026 – Present",
+      location: "Philippines",
       isCurrent: true,
-      description: "Architecting high-velocity CRM workflows, telephony webhooks, and automated lead follow-ups for real estate acquisitions.",
-      skills: ["GoHighLevel", "Node.js", "Webhooks", "CRM Architecture"]
+      description: "Leading technology strategy, full-stack product architecture, and engineering execution across client software and proprietary startup ventures.",
+      skills: ["Full-Stack Architecture", "Next.js", "TypeScript", "Product Strategy", "Cloud Infrastructure"]
     },
     {
-      role: "Hardware & Edge AI Developer",
-      company: "RTL Junkshop Capstone",
-      year: "2026",
-      isCurrent: true,
-      description: "Developing Raspberry Pi computer vision models and physical motor servos for automated recyclable segregation and coin incentives.",
-      skills: ["Raspberry Pi", "OpenCV", "Python", "TensorFlow Lite"]
+      role: "Web Developer",
+      company: "Elevate Remote Solutions",
+      year: "Jul 2026 – Nov 2026",
+      location: "US (Remote)",
+      description: "Engineered responsive web applications, created reusable component systems, and delivered high-performance frontend interfaces for remote client teams.",
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Web Engineering"]
     },
     {
-      role: "Full-Stack & Systems Developer",
-      company: "Independent / Freelance",
-      year: "2025",
-      description: "Built commercial platforms, desktop studios (Tango), and real-time multiplayer spaces (TeemChat) using Next.js, Supabase, and Flutter.",
-      skills: ["Next.js", "Flutter", "Supabase", "TypeScript"]
+      role: "Automation Engineer",
+      company: "FAR Agents",
+      year: "Mar 2026 – Jul 2026",
+      location: "US (Remote)",
+      description: "Architected high-velocity CRM workflows, telephony webhooks, automated lead follow-up cadences, and pipeline integrations for real estate acquisitions.",
+      skills: ["GoHighLevel", "Workflow Automation", "Node.js", "Webhooks", "CRM Architecture"]
     },
     {
-      role: "Lead Manager",
-      company: "FilamReiva",
-      year: "2024",
-      description: "Managed real estate acquisition pipelines, lead qualification cadences, and automated CRM record keeping.",
-      skills: ["Operations", "Pipeline Automation", "CRM"]
-    },
-    {
-      role: "Lead Manager",
+      role: "Web Developer",
       company: "Specialized Virtual Deals",
-      year: "2023",
-      description: "Oversaw virtual acquisition team operations, dialer setups, and high-volume lead routing engines.",
-      skills: ["Virtual Operations", "Team Leadership"]
+      year: "Feb 2023 – Dec 2025",
+      location: "US (Remote)",
+      description: "Developed and maintained custom internal web platforms, lead management dashboards, and digital tools supporting virtual real estate transactions.",
+      skills: ["Web Development", "JavaScript", "React", "Frontend Design", "Internal Tools"]
     },
     {
-      role: "Quality Assurance Specialist",
-      company: "My Automated Deals",
-      year: "2022",
-      description: "Monitored operational quality of cold calling engines, CRM data accuracy, and conversion funnels.",
-      skills: ["QA Testing", "Data Integrity"]
+      role: "Lead Manager / Team Leader",
+      company: "FILAMREIVA",
+      year: "Jul 2023 – Apr 2025",
+      location: "US (Remote)",
+      description: "Supervised virtual acquisition team operations, optimized pipeline routing cadences, and enforced CRM data hygiene and conversion workflows.",
+      skills: ["Team Leadership", "Operations Management", "Pipeline Optimization", "CRM Architecture"]
     },
     {
-      role: "Front-End Developer",
-      company: "CYWare",
-      year: "2022",
-      description: "Crafted responsive web interfaces and reusable client UI components.",
-      skills: ["HTML/CSS", "JavaScript", "React"]
+      role: "Jr. Web Designer",
+      company: "Freelance",
+      year: "Apr 2022 – Aug 2023",
+      location: "Philippines",
+      description: "Designed responsive websites, crafted conversion-focused landing pages, and produced tailored digital assets for diverse independent clients.",
+      skills: ["Web Design", "UI/UX", "HTML/CSS", "Figma", "Responsive Layouts"]
     },
     {
       role: "Hello World!",
@@ -111,9 +110,15 @@ export default function Experience() {
                     )}
                     <span>{exp.role}</span>
                   </h3>
-                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
-                    {exp.company}
-                  </span>
+                  <div className="flex flex-wrap items-center gap-1.5 text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                    <span>{exp.company}</span>
+                    {exp.location && (
+                      <>
+                        <span className="text-zinc-300 dark:text-zinc-600 font-normal">•</span>
+                        <span className="text-zinc-400 dark:text-zinc-500 font-normal">{exp.location}</span>
+                      </>
+                    )}
+                  </div>
                 </div>
 
                 <span className="font-mono text-[10px] font-semibold text-zinc-600 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded border border-zinc-200/60 dark:border-zinc-700/60 shrink-0">
